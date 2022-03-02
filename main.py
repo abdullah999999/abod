@@ -3,10 +3,7 @@ import telebot
 from telegram import MessageEntity, ReplyKeyboardMarkup, ReplyMarkup
 from telegram.ext import Updater
 
-
-token = '5202377147:AAFc5vd0EaG_DlOgFca4iqXHqxuHqx1mRoI'
-
-bot = telebot.TeleBot(token)
+bot = telebot.TeleBot(os.environ['TOKEN'])
 
 @bot.message_handler(commands=['start'])
 def start(message):
